@@ -10,14 +10,19 @@ const helper = new OpenWeatherMapHelper(
 );
 
   exports.getCities = function(req, res) {
+    var cities = ["Warszawa", "Łódz", "Płock"];
+    res.json(cities);
+  }
+
+  exports.getWeather = function(req, res) {
     helper.getCurrentWeatherByCityName(req.params.city, (err, currentWeather) => {
       if(err){
           console.log(err);
+          res.sendStatus(404);
       }
       else{
-          console.log(currentWeather);
+        console.log(currentWeather);
+        res.json(currentWeather);
       }
     });
-    res.sendStatus(200);
-    res.json("dziala");
   };
