@@ -5,7 +5,7 @@ const OpenWeatherMapHelper = require("openweathermap-node");
 const helper = new OpenWeatherMapHelper(
     {
         APPID: '609191e92beb5b9b8d10c2124c026211',
-        units: "metrics"
+        units: "metric"
     }
 );
 
