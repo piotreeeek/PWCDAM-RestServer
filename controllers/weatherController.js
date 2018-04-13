@@ -10,7 +10,7 @@ const helper = new OpenWeatherMapHelper(
 );
 
   exports.getCities = function(req, res) {
-    var cities = ["Warszawa", "Łódz", "Płock"];
+    var cities = [{id: 1, name: "Warszawa"}, {id: 2, name: "Łódz"}, {id:3, name: "Płock"}];
     res.json(cities);
   }
 
@@ -22,7 +22,9 @@ const helper = new OpenWeatherMapHelper(
       }
       else{
         console.log(currentWeather);
-        res.json(currentWeather);
+        var weather = {};
+        Object.assign(weather, currentWeather.weather[0],  currentWeather.main, currentWeather.wind, {visibility: currentWeather.visibility});
+        res.json(weather);
       }
     });
   };
