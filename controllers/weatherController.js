@@ -3,7 +3,7 @@ var weather = require('openweather-apis');
 var cities = [
     {id: 756135, name: "Warszawa"},
     {id: 3093133, name: "Łódź"},
-    {id: 3093066, name: "Lowicz"},
+    {id: 3093066, name: "Łowicz"},
     {id: 3088825, name: "Płock"},
     {id: 2950159, name: "Berlin"},
     {id: 2988507, name: "Paryż"},
