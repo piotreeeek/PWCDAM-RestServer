@@ -5,8 +5,8 @@ weather.setLang('pl');
 
 
   exports.getCities = function(req, res) {
-    var cities = [{id: 1, name: "Warszawa"}, {id: 2, name: "Łódź"}, {id:3, name: "Płock"}, {id:4, name: "dupacycki"}];
-    res.json(cities);
+     var cities = [{id: 1, name: "Warszawa"}, {id: 2, name: "Łódź"}, {id:3, name: "Płock"}, {id:4, name: "Berlin"}, {id:5, name: "Paryż"}, {id:6, name:"Londyn"}, {id:7, name:"Pekin"}];
+      res.json(cities);
   }
 
   exports.getWeather = function(req, res) {
